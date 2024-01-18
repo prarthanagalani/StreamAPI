@@ -1,6 +1,8 @@
 package StreamAPI;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -15,7 +17,8 @@ public class Main {
 
         //usecase2
         System.out.println("Usecase2: ");
-        arr.stream().map(n -> n*2).forEach(n -> System.out.println(n));
+        List<Integer>data = arr.stream().map(n -> n*2).collect(Collectors.toList());
+        System.out.println(data);
     }
     
 }
