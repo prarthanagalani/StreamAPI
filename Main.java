@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args)
     {
         ArrayList<Integer>arr = new ArrayList<>();
-        arr.add(1);
         arr.add(2);
+        arr.add(1);
         arr.add(3);
         arr.add(4);
 
@@ -49,6 +49,10 @@ public class Main {
 
         System.out.println("Atleast one even?");
         System.out.println(arr.stream().anyMatch(n -> n%2==0));
+
+        //usecase9
+        System.out.println("sorted list:");
+        arr.stream().sorted().forEach(n -> System.out.println(n));
        
     }
     
