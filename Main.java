@@ -42,6 +42,13 @@ public class Main {
 
         System.out.println("average: ");
         System.out.println(arr.stream().mapToDouble(Integer::doubleValue).average());
+
+        //usecase8
+        System.out.println("All are even?");
+        System.out.println(arr.stream().allMatch(n -> n%2==0));
+
+        System.out.println("Atleast one even?");
+        System.out.println(arr.stream().anyMatch(n -> n%2==0));
        
     }
     
