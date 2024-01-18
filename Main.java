@@ -36,6 +36,13 @@ public class Main {
 
         System.out.println("Min even number: ");
         System.out.println(arr.stream().filter(n -> n%2==0).min(Integer::compareTo).orElseThrow());
+
+        System.out.println("sum of list: ");
+        System.out.println(arr.stream().reduce((a,b)->a+b).orElseThrow());
+
+        System.out.println("average: ");
+        System.out.println(arr.stream().mapToDouble(Integer::doubleValue).average());
+       
     }
     
 }
