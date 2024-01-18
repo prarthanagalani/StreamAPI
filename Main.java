@@ -12,6 +12,7 @@ public class Main {
         arr.add(1);
         arr.add(2);
         arr.add(3);
+        arr.add(4);
 
         arr.stream().forEach(n -> System.out.println(n));
 
@@ -28,6 +29,13 @@ public class Main {
         //usecase5
         System.out.println("Usecase5: ");
         System.out.println(arr.stream().filter(n -> n%2==0).findFirst().orElseThrow());
+
+        //usecase6
+        System.out.println("Max even number: ");
+        System.out.println(arr.stream().filter(n -> n%2==0).max(Integer::compareTo).orElseThrow());
+
+        System.out.println("Min even number: ");
+        System.out.println(arr.stream().filter(n -> n%2==0).min(Integer::compareTo).orElseThrow());
     }
     
 }
